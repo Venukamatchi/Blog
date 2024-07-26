@@ -2,17 +2,6 @@
 
 This project includes my personal blog where I share details about myself, some cyber security information, front-end implementation, a simple bot, and some CTF challenges.
 
-## Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [CTF Challenges](#ctf-challenges)
-- [Sources](#sources)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## About
 
 This blog is a personal project where I document my journey and share knowledge about cyber security. It includes:
