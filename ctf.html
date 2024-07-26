@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="5.jpg">
+    <style>
+        /* Additional custom styles */
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <video class="logo" width="100" height="100" autoplay loop muted onclick="goToHomePage()">
+                        <source src="0.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ctf.html">Ctf-Challenge</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sources.html">Source</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bot.html">Bot-Assistant</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="content">
+        <div class="container">
+            <div class="blog-post">
+                <h2>CTF Challenge</h2>
+                <p>Welcome to the Cybersecurity Blog CTF Challenge!</p>
+                <p><strong>Task 1:</strong> Find the hidden flag.</p>
+                <p>Your task is to find the hidden flag. Here's your first clue:</p>
+                <p><strong>Clue:</strong> Look for the secret message hidden in the source code.</p>
+                <p>Good luck!</p>
+                <form id="flagForm">
+                    <div class="form-group">
+                        <label for="flagInput">Enter the flag:</label>
+                        <input type="text" class="form-control" id="flagInput" placeholder="Flag">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <p id="message"></p>
+            </div>
+    
+<!-- Additional Task -->
+<div class="blog-post">
+    <h2>Task 2: Decrypt the Message</h2>
+    <p>Your next challenge is to decrypt a secret message.</p>
+    <p><strong>Clue:</strong> The message is encoded using a simple Caesar cipher with a shift of 3.</p>
+    <p>Decrypt this message: "Wkh frxuvh lv wkh vhfuhw."</p>
+    <form id="decryptForm">
+        <div class="form-group">
+            <label for="decryptInput">Decrypted message:</label>
+            <input type="text" class="form-control" id="decryptInput" placeholder="Decrypted Message">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <p id="decryptMessage"></p>
+</div>
+
+<script>
+    document.getElementById("decryptForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the input value
+        var decryptedMessage = document.getElementById("decryptInput").value;
+        // Verify the decrypted message
+        if (decryptedMessage.toLowerCase() === "the secret is success.") {
+            document.getElementById("decryptMessage").textContent = "Congratulations! You decrypted the message.";
+        } else {
+            document.getElementById("decryptMessage").textContent = "Incorrect decryption. Try again.";
+        }
+    });
+</script>
+
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cybersecurity Blog</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("flagForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the input value
+            var flag = document.getElementById("flagInput").value;
+// Verify the flag
+if (flag === "correct_flag") {
+    document.getElementById("message").textContent = "Congratulations! You found the flag.";
+} else {
+    document.getElementById("message").textContent = "Incorrect flag. Try again.";
+}
+
+        });
+    </script>
+</body>
+</html>

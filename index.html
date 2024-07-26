@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="5.jpg">
+    <style>
+        /* Additional custom styles */
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <video class="logo" width="100" height="100" autoplay loop muted onclick="goToHomePage()">
+                        <source src="0.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ctf.html">Ctf-Challenge</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sources.html">Source</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bot.html">Bot-Assistant</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="content">
+        <div class="container">
+            <div class="blog-post">
+                <h3>Introduction to Cybersecurity</h3>
+                <p>Cybersecurity refers to the practice of protecting systems, networks, and data from digital attacks. These attacks are usually aimed at accessing, changing, or destroying sensitive information; extorting money from users; or interrupting normal business processes.</p>
+                <p>With the increasing reliance on digital technologies and the internet, cybersecurity has become a critical aspect of modern life. It encompasses various technologies, processes, and practices designed to safeguard information and systems from cyber threats.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Emerging Threats in 2024</h3>
+                <p>In 2024, cybersecurity professionals are facing several emerging threats:</p>
+                <ul>
+                    <li><strong><a href="https://www.crowdstrike.com/cybersecurity-101/secops/generative-ai/" target="_blank">Generative AI (GenAI):</a></strong> The rise of AI-powered tools and technologies poses new challenges in detecting and mitigating cyber threats, as attackers leverage AI for more sophisticated attacks.</li>
+                    <li><strong><a href="https://rodtrent.substack.com/p/unsecure-employee-behavior" target="_blank">Unsecure Employee Behavior:</a></strong> Employees often remain a weak link in cybersecurity, with unintentional actions such as clicking on phishing links or using weak passwords leading to security breaches.</li>
+                    <li><strong><a href="https://www.logicgate.com/blog/what-is-third-party-risk/" target="_blank">Third-Party Risks:</a></strong> Organizations increasingly rely on third-party vendors and suppliers, introducing additional vulnerabilities and potential access points for attackers.</li>
+                    <li><strong><a href="https://www.all-about-security.de/what-is-continuous-threat-exposure-management-ctem-and-why-should-you-care/" target="_blank">Continuous Threat Exposure:</a></strong> With the evolving nature of cyber threats, organizations face constant exposure to new and evolving threats, requiring continuous monitoring and adaptation of security measures.</li>
+                    <li><strong><a href="https://securityintelligence.com/articles/boardroom-cyber-expertise-scrutiny/" target="_blank">Boardroom Communication Gaps:</a></strong> Effective cybersecurity requires clear communication and collaboration between technical teams and executive leadership. Communication gaps between these groups can lead to misalignment of priorities and inadequate resource allocation for cybersecurity initiatives.</li>
+                    <li><strong><a href="https://www.openiam.com/identity-first-security-overview" target="_blank">Identity-First Approaches to Security:</a></strong> Traditional perimeter-based security measures are becoming less effective in the face of evolving threats and the increasing use of cloud services and mobile devices. Identity-first approaches focus on securing individual identities and devices rather than relying solely on network boundaries.</li>
+                </ul>
+            </div>            
+            <div class="blog-post">
+                <h3>Common Cybersecurity Threats</h3>
+                <p>There are various types of cybersecurity threats that individuals and organizations may face:</p>
+                <ul>
+                    <li><strong>Malware:</strong> Malicious software designed to disrupt, damage, or gain unauthorized access to computer systems.</li>
+                    <li><strong>Phishing:</strong> Fraudulent attempts to obtain sensitive information.</li>
+                    <li><strong>Ransomware:</strong> Malware that encrypts files or locks users out of their systems until a ransom is paid.</li>
+                    <li><strong>Denial of Service (DoS) Attacks:</strong> Attempts to make a machine or network resource unavailable to its intended users by overwhelming it with a flood of internet traffic.</li>
+                </ul>
+            </div>
+        </div>            </div>
+        </div>
+    </section>
+
+    <div id="bot-icon" onclick="toggleChat()">
+        <img src="chat.png" alt="Bot Icon">
+    </div>
+
+    <!-- Chat Container -->
+    <div id="chat-container">
+        <h2>Chat with our Cybersecurity Assistant</h2>
+        <div id="chat-history"></div>
+        <input type="text" id="input" placeholder="Type here..." class="form-control">
+        <button id="submit-btn" onclick="ask()" class="btn btn-primary mt-2">Send</button>
+    </div>
+
+    <footer class="mt-5">
+        <div class="container">
+            <p>&copy; 2024 Cybersecurity Blog</p>
+        </div>
+    </footer>
+ 
+    <!-- Bootstrap JS, Popper.js, and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
